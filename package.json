@@ -1,0 +1,32 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "This app matches individuals according to their compatibility based on the results of a personality survey.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamtheluckyest/Friend-Finder.git"
+  },
+  "keywords": [
+    "friends",
+    "compatibility",
+    "personality",
+    "survey",
+    "match"
+  ],
+  "author": "Annalisa Alden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamtheluckyest/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/iamtheluckyest/Friend-Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
+}

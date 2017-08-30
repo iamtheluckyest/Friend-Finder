@@ -1,0 +1,48 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	margin:0px;
+	padding:0px;
+	min-height: 100%;
+	position:relative;
+}
+
+body {
+	background-color: #daf5ce;
+	min-height:100%;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+	font-family: 'Bitter', serif;
+	font-size:42px;
+	margin-bottom: 15px
+}
+
+h2 {
+	font-family: 'Bitter', serif;
+	font-size:24px;
+	font-style: italic;
+}
+
+.jumbotron{
+	background-color: #fff;
+}
+
+.greentext {
+	color:#51b424;
+}
+
+.btn.btn-primary {
+	background-color: #51b424;
+	border-color: #51b424;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: #58c427;
+  border-color: #58c427;
+}
