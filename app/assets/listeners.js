@@ -8,7 +8,7 @@ $("#submit").on("click", function(){
 
     for (i = 1; i <= 10; i++) {
         newFriend.answers.push($("#question" + i).val().charAt(0))
-    }
+    };
 
     $.post("/api/friends", newFriend)
     .done(function(data) {
