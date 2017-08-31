@@ -13,5 +13,6 @@ $("#submit").on("click", function(){
     $.post("/api/friends", newFriend)
     .done(function(data) {
       console.log(data);
+
     });
 });

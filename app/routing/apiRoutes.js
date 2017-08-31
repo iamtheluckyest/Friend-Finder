@@ -1,6 +1,19 @@
 module.exports = function(app, friends){ 
-    app.get("/api/friends", function(req, res) {
-        console.log("getting...");
+    app.get("/api/friends/:friendName?", function(req, res) {
+        var friendName = req.params.friendName;
+        if (friendName){
+            for (i =0; i < friends.length; i++) {
+                if (friendName === friends[i].routeName) {
+                    res.json(friends[i]);
+                    break;
+                }
+                else {
+                    res.send("Sorry; no friend information exists at that location.")
+                }
+            }
+        } else {
+            res.json(friends);
+        }
     });
     
     app.post("/api/friends", function(req, res) {
