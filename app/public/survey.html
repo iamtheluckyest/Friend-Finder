@@ -2,14 +2,48 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<title>Friend Finder</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i|Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 <body>
+		<!-- Modal -->
+		<div class="modal" id="myModal">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Your Match!</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="row">	
+								<div class="col-4">
+									<img id="friendImg" style="width:100%;">
+								</div>
+								<div class="col-8">
+									<p>You've been matched with <span id="friendName"></span>!</p>
+									<p id="friendEmail"></p>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			</div>
+		</div>
 	<div class="container">
 		<div class="jumbotron greentext">
 			<h1>Friend Finder</h1>
@@ -26,6 +60,10 @@
 				    <label for="fullname">Full name:</label>
 				    <input type="text" class="form-control" id="fullname" aria-describedby="fullname" placeholder="Annalisa Alden">
 					</div>
+					<div class="form-group">
+							<label for="email">Full name:</label>
+							<input type="text" class="form-control" id="email" aria-describedby="email" placeholder="annalisa.alden@placeholder.com">
+						</div>
 					<div class="form-group">
 				    <label for="imgPath">Link to image:</label>
 				    <input type="text" class="form-control" id="imgPath" aria-describedby="picture-link" placeholder="http://via.placeholder.com/350x150">

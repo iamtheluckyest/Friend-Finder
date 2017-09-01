@@ -1,8 +1,9 @@
 $("#submit").on("click", function(){
     event.preventDefault();
     var newFriend = {
-      name: $("#fullname").val().trim(),
-      imgPath: $("#imgPath").val().trim(),
+      name : $("#fullname").val().trim(),
+      email : $("#email").val().trim(),
+      imgPath : $("#imgPath").val().trim(),
       answers : [],
       routeName : this.name.replace(/\s+/g, "").toLowerCase()
     };
@@ -39,6 +40,10 @@ $("#submit").on("click", function(){
           };
           console.log("bestMatch is: " + data[bestMatch.index].name)
           console.log(bestMatch);
+          $('#friendName').html(data[bestMatch.index].name);
+          $('#friendEmail').html(data[bestMatch.index].email);
+          $('#friendImg').attr("src", data[bestMatch.index].imgPath);
+          $('#myModal').modal('show')
         }
       });
     });
