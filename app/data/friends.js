@@ -7,7 +7,7 @@ var apiRoutes = require("../routing/apiRoutes.js");
 var app = express();
 var PORT = 8000;
 
-var friends = [{"name":"","imgPath":"","answers":["1","1","1","1","1","1","1","1","1","1"],"routeName":""},{"name":"hi There","imgPath":"afsd","answers":["1","1","1","1","1","1","1","2","1","1"],"routeName":"hithere"}];
+var friends = [{"name":"Sam","imgPath":"samimage","answers":["3","3","3","3","3","3","3","3","3","3"],"routeName":"sam"},{"name":"Hannah","imgPath":"hannahimg","answers":["4","4","4","4","4","4","4","4","4","4"],"routeName":"hannah"}, {"name":"James","imgPath":"jamesimg","answers":["1","1","1","1","1","1","1","1","1","1"],"routeName":"james"}];
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
