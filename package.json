@@ -2,10 +2,10 @@
   "name": "friend-finder",
   "version": "1.0.0",
   "description": "This app matches individuals according to their compatibility based on the results of a personality survey.",
-  "main": "server.js",
+  "main": "friends.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node friends.js"
   },
   "repository": {
     "type": "git",
