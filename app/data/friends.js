@@ -5,9 +5,10 @@ var htmlRoutes = require("../routing/htmlRoutes.js");
 var apiRoutes = require("../routing/apiRoutes.js");
 
 var app = express();
-var PORT = 8000;
+var PORT = process.env.PORT || 8000;
 
-var friends = [{"name":"Sam","imgPath":"https://cdn.pixabay.com/photo/2016/05/18/20/44/squirrel-1401509_960_720.jpg","answers":["3","3","3","3","3","3","3","3","3","3"],"routeName":"sam"},{"name":"Hannah","imgPath":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_C82KnktLi68lO4rXsHFi7A915kjWt2hsKpCw2hpR6DBPte8JLQ","answers":["4","4","4","4","4","4","4","4","4","4"],"routeName":"hannah"}, {"name":"James","imgPath":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjp-OIXNC050e2KQgvd8XDbf5um6Jg0us98-YvGowKeLdwBc3Ixg","answers":["1","1","1","1","1","1","1","1","1","1"],"routeName":"james"}];
+// A few default friends to start with....
+var friends = [{"name":"Lucy", email: "lucy@love.com", "imgPath":"https://images.moviepilot.com/image/upload/c_fill,h_470,q_auto:good,w_620/hyhmkkgdbswvci1duiii.jpg","answers":["3","3","3","3","3","3","3","3","3","3"],"routeName":"lucy"},{"name":"Gilgamesh", email:"gilgamesh@epic.com", imgPath:"https://vignette2.wikia.nocookie.net/villains/images/a/a4/Gilgamesh_%28Statue%29.jpg/revision/latest/scale-to-width-down/300?cb=20130616201510","answers":["4","4","4","4","4","4","4","4","4","4"],"routeName":"gilgamesh"}];
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
@@ -19,8 +20,9 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use("/assets", express.static(__dirname + '/../assets'));
 
+// Use external files for html and api gets/posts
 htmlRoutes(app);
 apiRoutes(app, friends);
 
 /*** Wish list: ***
- * User validation
+ * User validation **/
